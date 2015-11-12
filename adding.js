@@ -1,3 +1,19 @@
+//Function to connect add in users.
+MongoClient.connect(url, function(err, db) {
+  assert.equal(null, err);
+  adduser(db, function() {
+      db.close();
+  });
+});
+
+//Function to connect and add in trips.
+MongoClient.connect(url, function(err, db) {
+  assert.equal(null, err);
+  addtrip(db, function() {
+      db.close();
+  });
+});
+
 //Function for adding in users
 users.adduser = function(db) {
   return function(req, res) {

@@ -1,6 +1,7 @@
 trips.addtrip = function(db) {
   return function(req, res) {
 
+    //get user id from facebook api
     var user = fb_user_id;
 
     // Get our form values from attributes
